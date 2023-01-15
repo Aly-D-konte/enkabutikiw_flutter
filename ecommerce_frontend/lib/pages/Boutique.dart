@@ -33,7 +33,7 @@ class Boutique extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * .45,
                   child: Column(
                     children: [
-                      Container(
+                      SizedBox(
                         height: 100,
                         child: Image.asset(
                           "assets/images/images2.jpg",

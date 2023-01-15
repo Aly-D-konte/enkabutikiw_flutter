@@ -1,4 +1,4 @@
-import 'package:ecommerce_frontend/Boutique.dart';
+import 'package:ecommerce_frontend/pages/Boutique.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
