@@ -12,8 +12,10 @@ class HomeAppBar extends StatelessWidget {
     return Column(
       children: [
         Container(
+            //height: 500,
             color: Colors.white,
             padding: const EdgeInsets.all(25),
+            // decoration: const BoxDecoration(),
             child: Row(
               children: [
                 //icon pour le retour
@@ -22,6 +24,7 @@ class HomeAppBar extends StatelessWidget {
                   size: 30,
                   color: Colors.black,
                 ),
+
                 const Padding(padding: EdgeInsets.only(left: 20)),
                 //Spacer donne de l'espace entre deux valeurs
                 const Spacer(),
@@ -42,13 +45,9 @@ class HomeAppBar extends StatelessWidget {
                   child: const Icon(Icons.shopping_cart_outlined, size: 30),
                 )
               ],
-            )
-            ),
+            )),
         SlideWidget(),
       ],
     );
-
-
-
   }
 }

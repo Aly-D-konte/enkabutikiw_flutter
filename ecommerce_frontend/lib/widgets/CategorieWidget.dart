@@ -12,7 +12,7 @@ class CategorieWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(40),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -20,7 +20,7 @@ class CategorieWidget extends StatelessWidget {
                   SizedBox(
                       height: 35,
                       width: 35,
-                      child: Image.asset("assets/images/c2.png")),
+                      child: Image.asset("assets/images/images2.jpg")),
                   const Text(
                     "Habit",
                     style: TextStyle(

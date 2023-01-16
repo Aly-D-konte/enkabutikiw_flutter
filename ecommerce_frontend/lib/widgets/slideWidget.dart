@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce_frontend/widgets/CategorieWidget.dart';
+import 'package:ecommerce_frontend/widgets/ItemsWidget.dart';
 import 'package:flutter/material.dart';
 
 class SlideWidget extends StatelessWidget {
@@ -18,6 +19,7 @@ class SlideWidget extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       child: Column(
         children: [
+          //La partie slider
           Container(
             child: CarouselSlider.builder(
               itemCount: images.length,
@@ -41,7 +43,7 @@ class SlideWidget extends StatelessWidget {
                     //ClipRRect for image border radius
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
-                      child: Image.network(
+                      child: Image.asset(
                         images[i],
                         width: 500,
                         fit: BoxFit.cover,
@@ -56,6 +58,8 @@ class SlideWidget extends StatelessWidget {
               },
             ),
           ),
+
+          //Categorie
           Container(
             alignment: Alignment.centerLeft,
             margin: const EdgeInsets.symmetric(
@@ -64,7 +68,6 @@ class SlideWidget extends StatelessWidget {
             ),
             child: const Text(
               "Categories",
-              
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
@@ -72,7 +75,27 @@ class SlideWidget extends StatelessWidget {
               ),
             ),
           ),
+
+          //declaration du widget categorie
           CategorieWidget(),
+
+          //Items (element)
+
+          Container(
+              alignment: Alignment.centerLeft,
+              margin: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 5,
+              ),
+              child: const Text("Refrigerateur",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.black,
+                  ))),
+
+          //Items widget
+          ItemsWidget(),
         ],
       ),
     );

@@ -1,5 +1,4 @@
-import 'package:ecommerce_frontend/widgets/HomeAppBar.dart';
-import 'package:ecommerce_frontend/widgets/slideWidget.dart';
+import 'package:ecommerce_frontend/pages/HomePages.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +11,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeAppBar(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      routes: {"/": (context) => const Homepages()},
     );
   }
 }
