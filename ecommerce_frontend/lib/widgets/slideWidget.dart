@@ -59,43 +59,9 @@ class SlideWidget extends StatelessWidget {
             ),
           ),
 
-          //Categorie
-          Container(
-            alignment: Alignment.centerLeft,
-            margin: const EdgeInsets.symmetric(
-              vertical: 20,
-              horizontal: 10,
-            ),
-            child: const Text(
-              "Categories",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.normal,
-                color: Colors.black,
-              ),
-            ),
-          ),
+         
 
-          //declaration du widget categorie
-          CategorieWidget(),
-
-          //Items (element)
-
-          Container(
-              alignment: Alignment.centerLeft,
-              margin: const EdgeInsets.symmetric(
-                vertical: 5,
-                horizontal: 5,
-              ),
-              child: const Text("Refrigerateur",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.black,
-                  ))),
-
-          //Items widget
-          ItemsWidget(),
+          
         ],
       ),
     );

@@ -1,4 +1,7 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:ecommerce_frontend/widgets/CategorieWidget.dart';
 import 'package:ecommerce_frontend/widgets/HomeAppBar.dart';
+import 'package:ecommerce_frontend/widgets/ItemsWidget.dart';
 import 'package:flutter/material.dart';
 
 class Homepages extends StatelessWidget {
@@ -12,11 +15,10 @@ class Homepages extends StatelessWidget {
         Container(
           padding: const EdgeInsets.only(top: 5),
           decoration: const BoxDecoration(
-              color: Colors.red,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(35),
-                topRight: Radius.circular(35),
-              )),
+            topLeft: Radius.circular(35),
+            topRight: Radius.circular(35),
+          )),
           // child: Column(
           //   children: [
           //     Container(
@@ -40,8 +42,55 @@ class Homepages extends StatelessWidget {
           //     )
           //   ],
           // ),
-        )
+        ),
+        //Categorie
+        Container(
+          alignment: Alignment.centerLeft,
+          margin: const EdgeInsets.symmetric(
+            vertical: 20,
+            horizontal: 10,
+          ),
+          child: const Text(
+            "Categories",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.normal,
+              color: Colors.black,
+            ),
+          ),
+        ),
+
+        //declaration du widget categorie
+        CategorieWidget(),
+        //Items (element)
+
+        Container(
+            alignment: Alignment.centerLeft,
+            margin: const EdgeInsets.symmetric(
+              vertical: 5,
+              horizontal: 5,
+            ),
+            child: const Text("Refrigerateur",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.black,
+                ))),
+        Container(
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 240, 240, 240),
+            ),
+            child: //Items widget
+                ItemsWidget()),
       ]),
+      bottomNavigationBar: CurvedNavigationBar(
+        items: const [
+          Icon(Icons.add, size: 30),
+          Icon(Icons.list, size: 30),
+          Icon(Icons.compare_arrows, size: 30),
+        ],
+        onTap: (index) {},
+      ),
     );
   }
 }
