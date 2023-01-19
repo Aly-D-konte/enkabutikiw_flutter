@@ -85,11 +85,16 @@ class Homepages extends StatelessWidget {
       ]),
       bottomNavigationBar: CurvedNavigationBar(
         items: const [
-          Icon(Icons.add, size: 30),
-          Icon(Icons.list, size: 30),
-          Icon(Icons.compare_arrows, size: 30),
+          Icon(Icons.home, size: 30, color: Colors.white),
+          Icon(Icons.category_outlined, size: 30 , color: Colors.white),
+          Icon(Icons.shopping_bag_rounded, size: 30 , color: Colors.white),
+          Icon(Icons.favorite_border, size: 30 , color: Colors.white),
+          Icon(Icons.person_outline, size: 30, color: Colors.white),
         ],
         onTap: (index) {},
+        backgroundColor: Colors.transparent,
+        height: 30,
+        color: const Color.fromARGB(255, 147, 153, 228),
       ),
     );
   }

@@ -1,6 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:badges/badges.dart';
+import 'package:ecommerce_frontend/pages/PanierPage.dart';
+import 'package:ecommerce_frontend/widgets/PanierAppBar.dart';
+import 'package:ecommerce_frontend/widgets/panier_alert.dart';
 import 'package:ecommerce_frontend/widgets/slideWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +45,14 @@ class HomeAppBar extends StatelessWidget {
                 badgeColor: Colors.red,
                 padding: const EdgeInsets.all(5),
                 badgeContent: const Text("30"),
-                child: const Icon(Icons.shopping_cart_outlined, size: 30),
+                child: GestureDetector(
+                    child: const Icon(Icons.shopping_cart_outlined, size: 30),
+                    onTap: () {
+                      showDialog(
+                          barrierDismissible: false,
+                          context: context,
+                          builder: (ctx) => const PanierAlert());
+                    }),
               )
             ],
           ),

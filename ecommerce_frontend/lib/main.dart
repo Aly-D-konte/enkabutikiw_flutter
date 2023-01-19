@@ -1,4 +1,5 @@
 import 'package:ecommerce_frontend/pages/HomePages.dart';
+import 'package:ecommerce_frontend/pages/PanierPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 240, 240, 240),
       ),
-      routes: {"/": (context) => const Homepages()},
+      routes: {
+        "/": (context) => const Homepages(),
+        "panierPage" :(context) => PanierPage()
+      },
     );
   }
 }
