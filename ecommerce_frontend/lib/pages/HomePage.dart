@@ -17,47 +17,43 @@ class _HomepageState extends State<Homepage> {
     });
   }
 
-  final List<Widget> _pages = [
-     const Boutique()
-
-  ];
+  final List<Widget> _pages = [const Boutique()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back,
-        color: Colors.white,),
+        leading: const Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
         automaticallyImplyLeading: true,
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.search, color: Colors.white),
-              onPressed: () {},
-        ),
-         IconButton(
-          icon: const Icon(Icons.add_shopping_cart, color: Colors.white),
-          onPressed: () {},
-        ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.add_shopping_cart, color: Colors.white),
+            onPressed: () {},
+          ),
         ]
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         type: BottomNavigationBarType.fixed,
-        items:const [
-           BottomNavigationBarItem(
-              icon: Icon(Icons.home), label: 'Accuiel'),
-           BottomNavigationBarItem(
-              icon: Icon(Icons.bolt), label: 'Categories'),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accuiel'),
+          BottomNavigationBarItem(icon: Icon(Icons.bolt), label: 'Categories'),
           BottomNavigationBarItem(
             icon: Icon(Icons.bolt),
             label: 'Boutique',
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_rounded), label: 'Souhait'),
-           BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: 'Compte'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Compte'),
         ],
       ),
     );

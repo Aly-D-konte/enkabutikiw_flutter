@@ -1,5 +1,5 @@
-import 'package:ecommerce_frontend/widgets/HomeAppBar.dart';
-import 'package:ecommerce_frontend/widgets/slideWidget.dart';
+import 'package:ecommerce_frontend/pages/HomePages.dart';
+import 'package:ecommerce_frontend/pages/PanierPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +12,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeAppBar(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 240, 240, 240),
+      ),
+      routes: {
+        "/": (context) => const Homepages(),
+        "panierPage": (context) => PanierPage()
+      },
     );
   }
 }
