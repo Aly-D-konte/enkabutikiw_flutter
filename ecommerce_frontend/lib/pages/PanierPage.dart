@@ -1,4 +1,4 @@
-import 'package:ecommerce_frontend/widgets/PanierAppBar.dart';
+import 'package:ecommerce_frontend/widgets/PanierBottomNavBar.dart';
 import 'package:flutter/material.dart';
 
 class PanierPage extends StatelessWidget {
@@ -7,7 +7,6 @@ class PanierPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          PanierAppBar(),
         ],
       ),
     );

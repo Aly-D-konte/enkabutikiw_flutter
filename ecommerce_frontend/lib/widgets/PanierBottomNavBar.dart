@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PanierAppBar extends StatelessWidget {
+class PanierBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

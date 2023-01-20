@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 
+import 'dart:html';
+
 import 'package:badges/badges.dart';
-import 'package:ecommerce_frontend/pages/PanierPage.dart';
-import 'package:ecommerce_frontend/widgets/PanierAppBar.dart';
 import 'package:ecommerce_frontend/widgets/panier_alert.dart';
 import 'package:ecommerce_frontend/widgets/slideWidget.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +22,15 @@ class HomeAppBar extends StatelessWidget {
           child: Row(
             children: [
               //icon pour le retour
-              const Icon(
-                Icons.arrow_back_ios_outlined,
-                size: 30,
-                color: Colors.black,
+              GestureDetector(
+                child: const Icon(
+                  Icons.arrow_back_ios_outlined,
+                  size: 30,
+                  color: Colors.black,
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
 
               const Padding(padding: EdgeInsets.only(left: 20)),
@@ -52,14 +57,19 @@ class HomeAppBar extends StatelessWidget {
                           barrierDismissible: false,
                           context: context,
                           builder: (ctx) => const PanierAlert());
-                    }),
-              )
+                    },
+                    
+                    ),
+                    
+              ), 
             ],
           ),
         ),
         Container(
+            // height: 10,
+            padding: const EdgeInsets.only(top: 15),
             decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 240, 240, 240),
+                color: Color(0XFFEDECF2),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(35),
                   topRight: Radius.circular(35),

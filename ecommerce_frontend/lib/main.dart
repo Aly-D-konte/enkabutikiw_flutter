@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => const Homepages(),
-        "panierPage" :(context) => PanierPage()
+        "panierPage": (context) => PanierPage()
       },
     );
   }
