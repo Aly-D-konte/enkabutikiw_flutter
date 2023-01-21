@@ -1,6 +1,4 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_frontend/widgets/CategorieWidget.dart';
-import 'package:ecommerce_frontend/widgets/ItemsWidget.dart';
 import 'package:flutter/material.dart';
 
 class SlideWidget extends StatelessWidget {
@@ -13,10 +11,13 @@ class SlideWidget extends StatelessWidget {
     'assets/images/images2.jpg',
     'assets/images/images2.jpg',
   ];
+
+   SlideWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(15),
+      //margin: const EdgeInsets.all(15),
+      padding:const EdgeInsets.all(25),
       child: Column(
         children: [
           //La partie slider
@@ -58,10 +59,6 @@ class SlideWidget extends StatelessWidget {
               },
             ),
           ),
-
-         
-
-          
         ],
       ),
     );

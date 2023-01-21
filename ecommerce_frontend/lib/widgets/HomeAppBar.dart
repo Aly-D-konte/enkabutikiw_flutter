@@ -22,15 +22,25 @@ class HomeAppBar extends StatelessWidget {
           child: Row(
             children: [
               //icon pour le retour
-              GestureDetector(
-                child: const Icon(
-                  Icons.arrow_back_ios_outlined,
-                  size: 30,
-                  color: Colors.black,
-                ),
+              // GestureDetector(
+              //   child: const Icon(
+              //     Icons.arrow_back_ios_outlined,
+              //     size: 30,
+              //     color: Colors.black,
+              //   ),
+              //   onTap: () {
+              //     Navigator.pop(context, "HomePages");
+              //   },
+              // ),
+              InkWell(
                 onTap: () {
                   Navigator.pop(context);
                 },
+                child: const Icon(
+                  Icons.arrow_back,
+                  size: 20,
+                  color: Colors.black,
+                ),
               ),
 
               const Padding(padding: EdgeInsets.only(left: 20)),
@@ -51,17 +61,15 @@ class HomeAppBar extends StatelessWidget {
                 padding: const EdgeInsets.all(5),
                 badgeContent: const Text("30"),
                 child: GestureDetector(
-                    child: const Icon(Icons.shopping_cart_outlined, size: 30),
-                    onTap: () {
-                      showDialog(
-                          barrierDismissible: false,
-                          context: context,
-                          builder: (ctx) => const PanierAlert());
-                    },
-                    
-                    ),
-                    
-              ), 
+                  child: const Icon(Icons.shopping_cart_outlined, size: 30),
+                  onTap: () {
+                    showDialog(
+                        barrierDismissible: false,
+                        context: context,
+                        builder: (ctx) => const PanierAlert());
+                  },
+                ),
+              ),
             ],
           ),
         ),

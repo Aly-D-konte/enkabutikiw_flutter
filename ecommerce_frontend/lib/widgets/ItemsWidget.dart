@@ -6,11 +6,11 @@ class ItemsWidget extends StatelessWidget {
     return GridView.count(
       childAspectRatio: 0.68,
       //Faire scroller le contenu seulement
-      physics: const NeverScrollableScrollPhysics(),
+      //  physics: const NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
       shrinkWrap: true,
       children: [
-        for (int i = 1; i < 8; i++)
+        for (int i = 1; i < 7; i++)
           Container(
             padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
             margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
@@ -36,7 +36,10 @@ class ItemsWidget extends StatelessWidget {
                   ],
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    //pour afficher l'element selectionné
+                    Navigator.pushNamed(context, "itemPage");
+                  },
                   child: Container(
                     margin: const EdgeInsets.all(10),
                     child: Image.asset(

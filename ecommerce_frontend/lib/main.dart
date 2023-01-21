@@ -1,5 +1,5 @@
 import 'package:ecommerce_frontend/pages/HomePages.dart';
-import 'package:ecommerce_frontend/pages/PanierPage.dart';
+import 'package:ecommerce_frontend/pages/ItemPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => const Homepages(),
-        "panierPage": (context) => PanierPage()
+        "itemPage": (context) => ItemPage()
       },
     );
   }

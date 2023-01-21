@@ -1,4 +1,3 @@
-import 'package:ecommerce_frontend/widgets/PanierBottomNavBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -175,7 +174,6 @@ class PanierAlert extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  height: 50,
                   width: 700,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
