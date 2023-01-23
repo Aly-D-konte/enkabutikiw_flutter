@@ -46,7 +46,7 @@ class PanierAlert extends StatelessWidget {
                             color: Colors.orangeAccent,
                           ),
                         ),
-                        //la partie quantite
+                        //la partie ou on va ajouté ou enlever une quantite
                         Row(
                           children: [
                             Container(
