@@ -17,125 +17,144 @@ class ItemPage extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(15)),
+                  color: Colors.white, borderRadius: BorderRadius.circular(50)),
               height: 400,
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 100,
-                      child: Image.asset(
-                        "assets/images/images2.jpg",
-                      ),
-                    ),
-                    Column(
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+              child: Column(
+                children: [
+                  //l'image et la description
+                  Padding(
+                    padding: EdgeInsets.all(2),
+                    child: Row(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          // crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Column(
+                        //container contenant l'image
+                        Container(
+                          // color: Colors.red,
+
+                          width: MediaQuery.of(context).size.width * .40,
+                          height: 200,
+
+                          child: Image.asset(
+                            "assets/images/images2.jpg",
+                            width: 200,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        //container contenant la description
+                        Expanded(
+                          child: Container(
+                            //  color: Colors.amber,
+                            height: 200,
+                            child: Column(
                               children: [
-                                Container(
-                                  child: const Text("Test"),
+                                // le titre et licon favorite
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 50,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text(
+                                        'Description',
+                                        style: TextStyle(fontSize: 24),
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: const Icon(
+                                            Icons.favorite,
+                                            color: Colors.red,
+                                          ))
+                                    ],
+                                  ),
                                 ),
-                                const Text("Un réfrigérateur de référence"),
+                                // la description en elle meme
+                                const Padding(
+                                  padding: EdgeInsets.all(10),
+                                  child: Text(
+                                      "ma description essssssssssssssssssssssssssssss essssssssssssssssssssssssssssss essssssssssssssssssssssssssssss"),
+                                )
                               ],
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(left: 15),
-                              child: IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.favorite,
-                                    color: Colors.red,
-                                  )),
-                            ),
-                          ],
+                          ),
                         ),
                       ],
                     ),
+                  ),
 
-                    // Partie modification de quantité
-
-                    // Container(
-                    //   padding: EdgeInsets.all(20),
-                    //   margin: EdgeInsets.all(20),
-                    //   child: Padding(
-                    //     padding: EdgeInsets.all(20),
-                    //     child: Container(
-                    //       child: Row(
-                    //         children: [
-                    //           Container(
-                    //             padding: const EdgeInsets.all(4),
-                    //             decoration: BoxDecoration(
-                    //                 color: Colors.orangeAccent,
-                    //                 borderRadius: const BorderRadius.only(
-                    //                     topLeft: Radius.circular(10),
-                    //                     bottomLeft: Radius.circular(10)),
-                    //                 boxShadow: [
-                    //                   BoxShadow(
-                    //                       color: Colors.grey.withOpacity(0.5),
-                    //                       spreadRadius: 1,
-                    //                       blurRadius: 5)
-                    //                 ]),
-                    //             child: const Icon(
-                    //               CupertinoIcons.minus,
-                    //             ),
-                    //           ),
-                    //           Container(
-                    //             margin: const EdgeInsets.symmetric(
-                    //                 horizontal: 10),
-                    //             child: const Text(
-                    //               "01",
-                    //               style: TextStyle(
-                    //                   fontSize: 16,
-                    //                   fontWeight: FontWeight.normal),
-                    //             ),
-                    //           ),
-                    //           Container(
-                    //             padding: const EdgeInsets.all(5),
-                    //             decoration: BoxDecoration(
-                    //                 color: Colors.orangeAccent,
-                    //                 borderRadius: const BorderRadius.only(
-                    //                     topRight: Radius.circular(10),
-                    //                     bottomRight: Radius.circular(10)),
-                    //                 boxShadow: [
-                    //                   BoxShadow(
-                    //                       color: Colors.grey.withOpacity(0.5),
-                    //                       spreadRadius: 1,
-                    //                       blurRadius: 10)
-                    //                 ]),
-                    //             child: const Icon(
-                    //               CupertinoIcons.plus,
-                    //             ),
-                    //           )
-                    //         ],
-                    //       ),
-                    //     ),
-                    //   ),
-                    // )
-                    // Spacer(),
-                    // Padding(
-                    //   padding: const EdgeInsets.symmetric(vertical: 20),
-                    //   child: Column(
-                    //     crossAxisAlignment: CrossAxisAlignment.end,
-                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //     children: const [
-                    //       Icon(Icons.delete, color: Colors.red),
-                    //     ],
-                    //   ),
-                    // ),
-                  ],
-                ),
+                  //la partie d'ajout de quantite
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
+                            borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                bottomLeft: Radius.circular(10)),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 1,
+                                  blurRadius: 5)
+                            ]),
+                        child: const Icon(
+                          CupertinoIcons.minus,
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        child: const Text(
+                          "01",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
+                            borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(10),
+                                bottomRight: Radius.circular(10)),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 1,
+                                  blurRadius: 10)
+                            ]),
+                        child: const Icon(
+                          CupertinoIcons.plus,
+                        ),
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "1i",
+                                style: TextStyle(
+                                    backgroundColor: Colors.blue, fontSize: 40),
+                              ),
+                              Text("dd"),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
-              
             ),
-          
           ),
         ],
       ),
