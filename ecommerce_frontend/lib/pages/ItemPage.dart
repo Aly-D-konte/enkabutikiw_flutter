@@ -18,12 +18,12 @@ class ItemPage extends StatelessWidget {
               padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(50)),
-              height: 400,
+              height: 600,
               child: Column(
                 children: [
                   //l'image et la description
                   Padding(
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     child: Row(
                       children: [
                         //container contenant l'image
@@ -34,7 +34,7 @@ class ItemPage extends StatelessWidget {
                           height: 200,
 
                           child: Image.asset(
-                            "assets/images/images2.jpg",
+                            "assets/images/refi.jpg",
                             width: 200,
                             fit: BoxFit.cover,
                           ),
@@ -140,12 +140,114 @@ class ItemPage extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                "1i",
-                                style: TextStyle(
-                                    backgroundColor: Colors.blue, fontSize: 40),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "Bouique",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 24),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text("KONTE SHOP")
+                                  ],
+                                ),
                               ),
-                              Text("dd"),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "Categorie",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 24),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text("Refrigerateur")
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "Type",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 24),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text("Industriel")
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "Marque",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 24),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text("Sharp")
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "Modéle",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 24),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text("SJ-VT335")
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "Capacité",
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 24),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text("253 L")
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         )
