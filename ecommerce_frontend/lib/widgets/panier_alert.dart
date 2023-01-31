@@ -7,7 +7,7 @@ class PanierAlert extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.grey,
 
       //popup pour le panier
       content: Column(

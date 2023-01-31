@@ -2,7 +2,6 @@
 
 import 'dart:html';
 
-import 'package:badges/badges.dart';
 import 'package:ecommerce_frontend/widgets/panier_alert.dart';
 import 'package:ecommerce_frontend/widgets/slideWidget.dart';
 import 'package:flutter/material.dart';
@@ -47,9 +46,9 @@ class HomeAppBar extends StatelessWidget {
               //Spacer donne de l'espace entre deux valeurs
               const Spacer(),
               Badge(
-                badgeColor: Colors.red,
+                backgroundColor: Colors.red,
                 padding: const EdgeInsets.all(5),
-                badgeContent: const Text("30"),
+                label: const Text("30"),
                 child:
                     const Icon(Icons.notification_important_outlined, size: 30),
               ),
@@ -57,9 +56,9 @@ class HomeAppBar extends StatelessWidget {
                 width: 20,
               ),
               Badge(
-                badgeColor: Colors.red,
+                backgroundColor: Colors.red,
                 padding: const EdgeInsets.all(5),
-                badgeContent: const Text("30"),
+                label: const Text("30"),
                 child: GestureDetector(
                   child: const Icon(Icons.shopping_cart_outlined, size: 30),
                   onTap: () {
